@@ -11,10 +11,20 @@ Feel Free to use it!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-**First**
+**Prerequisites :**
+
+Make sure you have Node.js and Npm installed in your machine.
+
+Install Node.js
+
+Install Npm
+
+**First Step**
+
 clone the project and go to the folder and run "npm install" to install the node_modules
 
 **Second Step**
+
 run "npm start" to open the App
 
 **Have fun!**
