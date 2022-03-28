@@ -1,26 +1,9 @@
-import logo from './logo.svg';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import './App.css';
 
 function App() {
   
   const refAnalogWrapper = useRef(null)
-  const [analogWrapper, setAnalogWrapper] = useState();
-  //...
-  useEffect(() => {
-    let getPositions = refAnalogWrapper.current.getBoundingClientRect();
-    let YPosition = getPositions.y;
-    setAnalogWrapper(YPosition);
-    // console.log(refAnalogWrapper.current.getBoundingClientRect())
-  }, []);
-  
-
-  // useEffect(()=> {
-  //     console.log(refAnalogWrapper.current.getBoundingClientRect())
-  // }, [analogWrapper])
-
-  // console.log(refAnalogWrapper.current.getBoundingClientRect())
-
 
   return (
     <div id="analog-wrapper" ref={refAnalogWrapper}>
@@ -29,7 +12,6 @@ function App() {
   );
   
 }
-
 
 const Timer = () => {
   
@@ -117,7 +99,6 @@ const Timer = () => {
     }
     secondfirst[SecondFirst].classList.add("selected");
 
-    
     if(SecondSecond > 0) {
       setSecondSecondPosition(SecondSecond*heightPosition);
     } else {
@@ -128,29 +109,8 @@ const Timer = () => {
       secondsecond[i].classList.remove("selected");
     }
     secondsecond[SecondSecond].classList.add("selected");
-
-    
     
   }, 1000)
-
-  // useEffect(() => {
-
-  //   const colors = [
-  //     'Red', 'Green', 'Blue', 'Brown', 'Yellow', 'Black'
-  //   ]
-  
-  //   const loopFun = () => {
-  //     for(let i=0; i<colors.length; i++){
-        
-  //     }
-  //   }
-  
-  //   useEffect(()=>{
-  //     loopFun();
-  //   }, []);
-
-  // }, [])
-  
 
   return (<>
   <div className="hours-container">
